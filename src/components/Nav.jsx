@@ -2,10 +2,6 @@ import React from "react";
 
 const links = [
   {
-    name: "Home",
-    path: "/",
-  },
-  {
     name: "Sobre Nosotros",
     path: "/we",
   },
@@ -17,12 +13,16 @@ const links = [
     name: "Servicios",
     path: "/services",
   },
+  {
+    name: "Galería",
+    path: "/galery",
+  },
 ];
 
 const Nav = () => {
   return (
-    <nav className="hidden lg:flex ">
-      <ul className="flex gap-10 font-medium list-none">
+    <nav className="hidden lg:flex">
+      <ul className="flex gap-8 font-medium text-white text-lg list-none">
         {links.map((link, index) => {
           return (
             <li key={index} className="">

@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply max-w-7xl leading-loose mx-auto;
+    @apply leading-loose;
   }
 }
