@@ -1,8 +1,8 @@
 import React from "react";
 import Logo from "../assets/Logo_negativ.png";
-import { FaBars, FaTimes } from "react-icons/fa";
 import Nav from "./Nav";
-import video from "../assets/headerAruba.mp4";
+import MobileNav from "./MobileNav";
+// import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
@@ -12,12 +12,14 @@ const Header = () => {
           <img src={Logo} alt="Logo Luzdaser" />
         </a>
       </div>
+      {/*desktop navbar */}
       <Nav />
       <button className="hidden lg:flex bg-blue-900 text-white px-4 rounded-md font-bold hover:scale-105 transition ease-in-out ">
         Contactanos
       </button>
+      {/* Mobile navbar */}
       <div className="lg:hidden">
-        <FaBars />
+        <MobileNav/>
       </div>
     </header>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const links = [
   {
@@ -15,18 +15,19 @@ const links = [
   },
   {
     name: "Galería",
-    path: "/galery",
+    path: "/gallery",
   },
 ];
 
 const Nav = () => {
+
   return (
     <nav className="hidden lg:flex">
-      <ul className="flex gap-8 font-medium text-white text-lg list-none">
+      <ul className="flex gap-8  list-none">
         {links.map((link, index) => {
           return (
-            <li key={index} className="">
-              <a href={link.path} className="">{link.name}</a>
+            <li key={index}>
+              <a href={link.path} className="font-sans font-medium text-white text-xl">{link.name}</a>
             </li>
           );
         })}

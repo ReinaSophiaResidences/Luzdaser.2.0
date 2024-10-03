@@ -1,4 +1,5 @@
 import React from "react";
+import StaggerText from "react-stagger-text";
 import beachVideo from "../assets/headerAruba.mp4";
 
 const Hero = () => {
@@ -11,7 +12,30 @@ const Hero = () => {
         muted
         loop
       />
-      <div className="absolute w-full h-full top-0 left-0 bg-gray-900/50"></div>
+      <div className="absolute w-full h-full top-0 left-0 bg-gradient-to-b from-blue-400/10 to-green-100/20 z-0 border border-blue-500 border-opacity-50 p-4">
+        <div className="relative flex items-center h-full max-w-7xl mx-auto">
+          <div className="ml-10 space-y-5 z-40">
+            <h1 className="text-white tracking-tight font-serif font-bold text-5xl lg:text-7xl">
+              <StaggerText
+                staggerType="letter"
+                staggerDuration={1}
+                startDelay={500}
+              >
+                "Aruba te espera"
+              </StaggerText>
+            </h1>
+            <p className="text-white text-2xl">
+              <StaggerText
+                staggerType="letter"
+                staggerDuration={1}
+                startDelay={500}
+              >
+                Vive donde siempre soñaste
+              </StaggerText>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
