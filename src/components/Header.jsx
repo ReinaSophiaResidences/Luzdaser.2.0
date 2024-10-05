@@ -6,7 +6,7 @@ import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
-    <header className="flex w-full justify-between items-center h-28 px-4 absolute left-0 right-0 z-10 lg:max-w-7xl mx-auto">
+    <header className="flex w-full justify-between items-center h-28 px-4 absolute left-0 right-0 z-10 lg:max-w-6xl mx-auto">
       <div>
         <a href="/" className="block w-36 h-auto no-underline">
           <img src={Logo} alt="Logo Luzdaser" />

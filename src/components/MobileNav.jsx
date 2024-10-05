@@ -1,26 +1,27 @@
 import React from "react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import mobileLogo from "../assets/Luzdazer.png";
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
     {
-        name: "Sobre Nosotros",
-        path: "/we"
+      name: "Sobre Nosotros",
+      path: "/we",
     },
     {
-        name: "Proyectos",
-        path: "/proyects"
+      name: "Proyectos",
+      path: "/proyects",
     },
     {
-        name: "Servicios",
-        path: "/services"
+      name: "Servicios",
+      path: "/services",
     },
     {
-        name: "Galería",
-        path: "/gallery"
+      name: "Galería",
+      path: "/gallery",
     },
   ];
 
@@ -49,51 +50,57 @@ const MobileNav = () => {
     <nav className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="absolute top-4 right-4 focus:outline-none z-40"
+        className={`focus:outline-none z-50 ${
+          isOpen ? "fixed right-10 top-14" : "absolute top-0 right-6"
+        }`}
       >
         <motion.div
-          className="w-6 h-1 bg-white mb-1 rounded"
+          className={`w-6 h-1 mb-1 rounded top-14 ${isOpen ? 'bg-black':'bg-white'} transition-colors duration-500 ease-out delay-200`}
           animate={isOpen ? "open" : "closed"}
           variants={topLineVariants}
           transition={{ duration: 0.3 }}
         />
         <motion.div
-          className="w-6 h-1 bg-white mb-1 rounded"
+          className={`w-6 h-1 mb-1 rounded top-16 ${isOpen ? 'bg-black':'bg-white'} transition-colors duration-500 ease-out delay-200`}
           animate={isOpen ? "open" : "closed"}
           variants={middleLineVariants}
           transition={{ duration: 0.3 }}
         />
         <motion.div
-          className="w-6 h-1 bg-white rounded"
+          className={`w-6 h-1 mb-1 rounded top-20 ${isOpen ? 'bg-black': 'bg-white'} transition-colors duration-500 ease-out delay-200`}
           animate={isOpen ? "open" : "closed"}
           variants={bottomLineVariants}
           transition={{ duration: 0.3 }}
         />
       </button>
-    <AnimatePresence>
-      {isOpen && (
-        <motion.ul
-          className="fixed w-4/5 right-0 top-0 bottom-0 bg-gradient-to-b from-blue-500 to-green-300 flex flex-col items-center justify-center  space-y-4 z-0"
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          variants={menuVariants}
-          transition={{ type: "spring", stiffness: 80, damping: 20 }}
-        >
-          {links.map((item, index) => (
-            <li
-              key={index}
-              href={item.path}
-              onClick={() => setIsOpen(false)}
-            >
-                <a className="text-white text-2xl hover:text-gray-300">
-                  {item.name}  
-                </a>
-              
-            </li>
-          ))}
-        </motion.ul>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="fixed w-4/5 right-0 top-0 bottom-0 bg-gradient-to-b from-white to-green-300 flex flex-col items-center space-y-4 z-0"
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={menuVariants}
+            transition={{ type: "spring", stiffness: 80, damping: 20 }}
+          >
+            <div className="w-32 h-32 mt-28">
+              <img src={mobileLogo} alt="mobileLogo" />
+            </div>
+            <ul className="space-y-8">
+              {links.map((item, index) => (
+                <li
+                  key={index}
+                  href={item.path}
+                  onClick={() => setIsOpen(false)}
+                >
+                  <a className="text-black text-2xl hover:text-gray-300">
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
       </AnimatePresence>
     </nav>
   );

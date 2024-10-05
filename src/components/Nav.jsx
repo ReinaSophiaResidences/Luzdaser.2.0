@@ -23,7 +23,7 @@ const Nav = () => {
 
   return (
     <nav className="hidden lg:flex">
-      <ul className="flex gap-8  list-none">
+      <ul className="flex gap-8 list-none">
         {links.map((link, index) => {
           return (
             <li key={index}>
