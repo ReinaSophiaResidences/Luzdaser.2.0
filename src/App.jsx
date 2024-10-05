@@ -1,9 +1,16 @@
+import AboutUs from "./components/AboutUs"
+import Footer from "./components/Footer"
+import Header from "./components/Header"
+import Hero from "./components/Hero"
 
 function App() {
 
   return (
-    <div className='text-red-500 font-extrabold'>
-      habla
+    <div>
+      <Header/>
+      <Hero/>
+      <AboutUs/>
+      <Footer/>
     </div>
   )
 }
