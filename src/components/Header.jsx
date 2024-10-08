@@ -14,7 +14,7 @@ const Header = () => {
       </div>
       {/*desktop navbar */}
       <Nav />
-      <button className="hidden lg:flex bg-blue-900 text-white px-4 rounded-md font-bold hover:scale-105 transition ease-in-out ">
+      <button className="hidden lg:flex bg-teal-500 text-white px-5 py-1 rounded-md font-serif font-medium hover:scale-105 transition ease-in-out hover:font-semibold">
         Contactanos
       </button>
       {/* Mobile navbar */}
