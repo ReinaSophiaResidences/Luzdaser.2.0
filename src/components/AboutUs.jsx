@@ -1,43 +1,38 @@
-import React, { useEffect, useRef, useState } from "react";
-import { FaCaretRight, FaCaretLeft } from "react-icons/fa";
+import React from "react";
 import imgSlider1 from "../assets/Us1.avif";
-import imgSlider2 from "../assets/Us2.avif";
-import imgSlider3 from "../assets/Us3.avif";
 import imgSlider4 from "../assets/Us4.avif";
 
-const images = [imgSlider1, imgSlider2, imgSlider3, imgSlider4];
-
 const AboutUs = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const delay = 5000; // 5 segundos
-  const intervalRef = (useRef(null)) // Guardar referencia del intervalo
+  // const [currentIndex, setCurrentIndex] = useState(0);
+  // const delay = 5000; // 5 segundos
+  // const intervalRef = useRef(null); // Guardar referencia del intervalo
 
-  const startInterval = () => {
-    intervalRef.current = window.setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, delay);
-  };
+  // const startInterval = () => {
+  //   intervalRef.current = window.setInterval(() => {
+  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  //   }, delay);
+  // };
 
-  // Iniciar intervalo en el montaje del componente
-  useEffect(() => {
-    startInterval();
-    return () => clearInterval(intervalRef.current); // Limpiar intervalo al desmontar
-  }, []);
+  // // Iniciar intervalo en el montaje del componente
+  // useEffect(() => {
+  //   startInterval();
+  //   return () => clearInterval(intervalRef.current); // Limpiar intervalo al desmontar
+  // }, []);
 
-  // Reiniciar el intervalo al hacer clic en 'Next' o 'Prev'
-  const handleNext = () => {
-    clearInterval(intervalRef.current); // Limpiar intervalo actual
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    startInterval(); // Reiniciar intervalo
-  };
+  // // Reiniciar el intervalo al hacer clic en 'Next' o 'Prev'
+  // const handleNext = () => {
+  //   clearInterval(intervalRef.current); // Limpiar intervalo actual
+  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  //   startInterval(); // Reiniciar intervalo
+  // };
 
-  const handlePrev = () => {
-    clearInterval(intervalRef.current); // Limpiar intervalo actual
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-    startInterval(); // Reiniciar intervalo
-  };
+  // const handlePrev = () => {
+  //   clearInterval(intervalRef.current); // Limpiar intervalo actual
+  //   setCurrentIndex((prevIndex) =>
+  //     prevIndex === 0 ? images.length - 1 : prevIndex - 1
+  //   );
+  //   startInterval(); // Reiniciar intervalo
+  // };
 
   return (
     <div className="w-full h-full mx-auto bg-gray-200/20 mt-20">
@@ -45,40 +40,10 @@ const AboutUs = () => {
         {/* Contenedor de la imagen */}
         <div className="relative w-full lg:max-w-[50%] h-[400px] lg:h-[500px]">
           <img
-            src={images[currentIndex]}
+            src={imgSlider4}
             alt="aboutUs"
-            className="w-full h-full object-cover rounded-3xl transition-opacity duration-1000 ease-in-out"
+            className="w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
           />
-          {/* Botón Anterior */}
-          <button
-            onClick={handlePrev}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-400 text-white p-2 rounded-full opacity-70 hover:scale-110 hover:opacity-100"
-          >
-            <FaCaretLeft/>
-          </button>
-          {/* Botón Siguiente */}
-          <button
-            onClick={handleNext}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-400 text-white p-2 rounded-full opacity-70 hover:scale-110 hover:opacity-100"
-          >
-            <FaCaretRight/>
-          </button>
-          {/* Indicadores de imágenes */}
-          <div className="absolute bottom-2 left-0 right-0 flex justify-center space-x-2 opacity-70">
-            {images.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  clearInterval(intervalRef.current); // Limpiar el intervalo cuando se hace clic en un punto
-                  setCurrentIndex(index);
-                  startInterval(); // Reiniciar el intervalo
-                }}
-                className={`w-3 h-3 rounded-full ${
-                  index === currentIndex ? "bg-white" : "bg-gray-400"
-                }`}
-              ></button>
-            ))}
-          </div>
         </div>
         {/* Contenedor del texto */}
         <div className="lg:w-1/2 space-y-5 mb-5">
@@ -101,6 +66,31 @@ const AboutUs = () => {
             Somos el referente que impulsa el desarrollo de Aruba, brindando
             oportunidades de vivienda excepcionales para todos.
           </p>
+        </div>
+      </div>
+      {/* seccion 2 */}
+      <div className="flex flex-col lg:flex-row max-w-6xl mx-auto justify-between items-center px-5 lg:px-0">
+        {/* Contenedor de la imagen */}
+        <div className="relative w-full lg:max-w-[50%] h-[400px] lg:h-[500px]">
+          <img
+            src={imgSlider1}
+            alt="aboutUs2"
+            className="w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
+          />
+        </div>
+        {/* Contenedor del texto */}
+        <div className="lg:w-1/2 space-y-10 mb-5">
+          <h2 className="font-serif text-6xl text-center lg:text-right my-5">
+            Nuestros Servicios
+          </h2>
+          <p className="leading-snug lg:text-base text-left xl:text-right lg:pl-5">
+            En estos momentos nuestros servicios, pasión y energíasestán
+            volcadas en la creación de un Proyecto Residencialcon fecha
+            determinada.
+          </p>
+          <button className="mx-auto flex bg-teal-500 text-white px-5 py-1 rounded-md font-serif font-medium hover:scale-105 transition ease-in-out hover:font-semibold">
+            Ver Más
+          </button>
         </div>
       </div>
     </div>

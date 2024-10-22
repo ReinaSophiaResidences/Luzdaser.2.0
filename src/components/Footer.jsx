@@ -22,8 +22,9 @@ const links = [
 
 const Footer = () => {
   return (
-    <footer className="w-full min-h-80 bg-gradient-to-b bg-black flex flex-col lg:justify-between text-white">
-      <div className="flex justify-center max-w-6xl w-full mx-auto mt-4">
+    <footer className="relative w-full min-h-96 flex flex-col lg:justify-between text-white bg-[url('assets/footerbg.webp')] bg-cover bg-center z-0">
+      <div className="w-full h-full absolute top-0 left-0 bg-gray-800/60 z-10"/>
+      <div className="flex justify-center max-w-6xl w-full mx-auto mt-4 z-20">
         <div className="w-1/2">
           <img src={mobileLogo} alt="mobileLogo" className="w-32"/>
         </div>
@@ -60,8 +61,8 @@ const Footer = () => {
           <div>rss</div>
         </div>
       </div>
-      <div className="max-w-6xl mx-auto text-left">
-        <p className="text-right w-full">Derechos Reservados</p>
+      <div className="w-full mx-auto text-left border-t-[1px] z-20">
+        <p className="text-center w-full">Derechos Reservados</p>
       </div>
     </footer>
   );
