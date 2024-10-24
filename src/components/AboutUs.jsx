@@ -50,19 +50,19 @@ const AboutUs = () => {
           <h2 className="font-serif text-6xl text-center lg:text-left my-5">
             Sobre nosotros
           </h2>
-          <p className="leading-snug lg:text-base lg:pr-5">
+          <p className="leading-snug lg:text-base text-justify lg:pr-5">
             A través de Eco Blog Real Estate & Construction VBA, creamos
             viviendas que combinan calidad, belleza y diseño innovador. Nuestro
             proyeco Reina Sofha en Paradera es un testimonio de nuestra visión:
             Lineas limpias, minimalismo elegante y una infraestructura de
             vanguardia
           </p>
-          <p className="leading-snug lg:text-base lg:pr-5">
+          <p className="leading-snug lg:text-base text-justify lg:pr-5">
             JBSS ECO Real Estate te acompaña en la busqueda de tu hogar ideal en
             Aruba. Ya seas local o extrajero, nuestras oferta inmobiliaria se
             adapta a tus necesidades y estilo de vida.
           </p>
-          <p className="leading-snug lg:text-base lg:pr-5">
+          <p className="leading-snug lg:text-base text-justify lg:pr-5">
             Somos el referente que impulsa el desarrollo de Aruba, brindando
             oportunidades de vivienda excepcionales para todos.
           </p>
@@ -83,10 +83,18 @@ const AboutUs = () => {
           <h2 className="font-serif text-6xl text-center lg:text-right my-5">
             Nuestros Servicios
           </h2>
-          <p className="leading-snug lg:text-base text-left xl:text-right lg:pl-5">
-            En estos momentos nuestros servicios, pasión y energíasestán
-            volcadas en la creación de un Proyecto Residencialcon fecha
-            determinada.
+          <p className="leading-snug lg:text-base text-justify lg:pl-5">
+            En estos momentos nuestros servicios, pasión y energías están
+            volcadas en la creación de un Proyecto Residencial con fecha
+            determinada. Durante esta etapa, nuestra dedicación se centra en
+            ofrecer servicios de diseño y gestión de proyectos de la más alta
+            calidad. garantizando que cada elemento se alinee con nuestra Visión
+            de excelencia. Nuestro compromiso inquebrantable es entregar un
+            Complejo Residencial que no solo cumpla sino que supere las
+            expectativas de quienes tendrán el privilegio de llamarlo Hogar.
+            Aspiramos a crear un entorno que inspire, deleite y brinde una
+            experiencia de vida inigualable a cada uno de sus residentes. Nos
+            enorgullece ser una empresa organizada y perseverante.
           </p>
           <button className="mx-auto flex bg-teal-500 text-white px-5 py-1 rounded-md font-serif font-medium hover:scale-105 transition ease-in-out hover:font-semibold">
             Ver Más

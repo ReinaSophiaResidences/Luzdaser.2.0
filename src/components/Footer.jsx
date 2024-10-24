@@ -1,5 +1,7 @@
 import React from "react";
 import mobileLogo from "../assets/Logo_negativ.png";
+import { FaInstagram } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 const links = [
   {
@@ -26,7 +28,7 @@ const Footer = () => {
       <div className="w-full h-full absolute top-0 left-0 bg-gray-800/60 z-10"/>
       <div className="flex justify-center max-w-6xl w-full mx-auto mt-4 z-20">
         <div className="w-1/2">
-          <img src={mobileLogo} alt="mobileLogo" className="w-32"/>
+          <img src={mobileLogo} alt="mobileLogo" className="w-48"/>
         </div>
         <div className="lg:flex w-1/2 justify-between">
           <div className="">
@@ -35,7 +37,7 @@ const Footer = () => {
               {links.map((link, index) => {
                 return (
                   <li key={index}>
-                    <a href={link.path} className="">
+                    <a href={link.path} className="text-lg">
                       {link.name}
                     </a>
                   </li>
@@ -58,7 +60,10 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>rss</div>
+          <div className="space-y-4 pb-5">
+            <FaInstagram size={30}/>
+            <FaWhatsapp size={30}/>
+          </div>
         </div>
       </div>
       <div className="w-full mx-auto text-left border-t-[1px] z-20">

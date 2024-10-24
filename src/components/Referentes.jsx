@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import reinasophialogo from "../assets/reinasophialogo.png";
+import reinasophialogo from "../assets/reinasop.png";
 import { FaCaretRight, FaCaretLeft } from "react-icons/fa";
 import imgSlider1 from "../assets/complejo1.webp";
 import imgSlider2 from "../assets/complejo2.webp";
