@@ -19,7 +19,7 @@ const Models = () => {
           <h2 className="font-serif text-5xl text-center lg:text-left my-5">
             Casa Modelo Luca
           </h2>
-          <p className="leading-snug lg:text-base lg:pr-5">
+          <p className="leading-snug lg:text-base text-justify lg:pr-5">
             Situada en el paraíso tropical de Aruba, esta acogedora casa es la
             opción ideal para quienes buscan una propiedad funcional y de fácil
             mantenimiento, sin renunciar a la comodidad ni al estilo. A solo
@@ -52,7 +52,7 @@ const Models = () => {
           <h2 className="font-serif text-5xl text-center lg:text-right my-5">
             Modelo Casa Oliver
           </h2>
-          <p className="leading-snug lg:text-base text-left xl:text-right lg:pl-5">
+          <p className="leading-snug lg:text-base text-justify lg:pl-5">
             En el idílico entorno tropical de Aruba, se encuentra esta magnífica
             casa que redefine el concepto de lujo y confort. A pocos minutos de
             las deslumbrantes playas, esta casa ofrece un refugio exclusivo y
