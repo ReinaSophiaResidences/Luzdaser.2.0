@@ -15,8 +15,8 @@ const Models = () => {
           />
         </div>
         {/* Contenedor del texto */}
-        <div className="lg:w-1/2 space-y-5 mb-5">
-          <h2 className="font-serif text-6xl text-center lg:text-left my-5">
+        <div className="lg:w-1/2 space-y-5 mb-5 overflow-hidden">
+          <h2 className="font-serif text-5xl text-center lg:text-left my-5">
             Casa Modelo Luca
           </h2>
           <p className="leading-snug lg:text-base lg:pr-5">
@@ -49,7 +49,7 @@ const Models = () => {
         </div>
         {/* Contenedor del texto */}
         <div className="lg:w-1/2 space-y-10 mb-5">
-          <h2 className="font-serif text-6xl text-center lg:text-right my-5">
+          <h2 className="font-serif text-5xl text-center lg:text-right my-5">
             Modelo Casa Oliver
           </h2>
           <p className="leading-snug lg:text-base text-left xl:text-right lg:pl-5">
