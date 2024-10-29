@@ -7,12 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#1D4ED8',
-        secondary: '#FBBF24',
-        accent: '#10B981',
+        primary: '#313a45',
+        secondary: '#F5831F',
+        accent: '#B22A2E',
       },
       fontFamily: {
-        sans: ['Quicksand', 'sans-serif'],
+        sans: ['Gideon Roman', 'sans-serif'],
         serif: ['Raleway', 'serif'],
       },
     },

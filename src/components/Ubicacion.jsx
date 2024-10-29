@@ -2,7 +2,7 @@ import React from "react";
 
 const Ubicacion = () => {
   return (
-    <section className="md:flex justify-between items-center max-w-6xl mx-5 xl:mx-auto mb-10">
+    <section className="md:flex justify-between items-center max-w-6xl mx-5 xl:mx-auto mb-10 font-serif">
       <div className="py-10">
         <h3 className="mt-4 text-xl font-extrabold">UBICACIÓN</h3>
         <p className="mt-2">

@@ -1,4 +1,4 @@
-
+import React from "react";
 
 const links = [
   {
@@ -27,7 +27,7 @@ const Nav = () => {
         {links.map((link, index) => {
           return (
             <li key={index}>
-              <a href={link.path} className="font-sans font-medium text-white text-xl">{link.name}</a>
+              <a href={link.path} className="font-serif font-medium text-[white] text-lg">{link.name}</a>
             </li>
           );
         })}
