@@ -36,7 +36,7 @@ const AboutUs = () => {
   // };
 
   return (
-    <div className="w-full h-full mx-auto my-20">
+    <section id="we" className="w-full h-full mx-auto my-20">
       <div className="flex flex-col lg:flex-row-reverse max-w-6xl mx-auto justify-between items-center px-5 lg:px-0 mb-20">
         {/* Contenedor de la imagen */}
         <div className="relative w-full lg:max-w-[50%] h-[300px] lg:h-[400px] py-10">
@@ -77,7 +77,7 @@ const AboutUs = () => {
         </div>
       </div>
       {/* seccion 2 */}
-      {/* <div className="flex flex-col lg:flex-row max-w-6xl mx-auto justify-between items-center px-5 lg:px-0">
+      {/* <section className="flex flex-col lg:flex-row max-w-6xl mx-auto justify-between items-center px-5 lg:px-0">
         {/* Contenedor de la imagen */}
       {/* <div className="relative w-full lg:max-w-[50%] h-[400px] lg:h-[500px]">
         <img
@@ -110,7 +110,7 @@ const AboutUs = () => {
       </div> */}
       {/* </div> */}
       <div className="min-h-screen bg-[url('./assets/27.webp')] bg-center bg-cover bg-fixed pb-40">
-        <div className="w-60 h-full mx-auto">
+        <div id="services" className="w-60 h-full mx-auto">
           <img src={logo2} alt="Logo Luzdaser" className="w-full h-full object-cover py-10" />
         </div>
         <div className="mx-auto max-w-6xl">
@@ -162,7 +162,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

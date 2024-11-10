@@ -5,7 +5,7 @@ import bgimg from "../assets/HERO4.webp";
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-screen">
+    <div id="inicio" className="relative w-full h-screen">
       {/* <video
         className="w-full h-full object-cover absolute"
         src={beachVideo}
