@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import mobileLogo from "../assets/Luzdazer.png";
+import { HashLink as Link } from "react-router-hash-link";
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,19 +10,19 @@ const MobileNav = () => {
   const links = [
     {
       name: "Sobre Nosotros",
-      path: "/we",
-    },
-    {
-      name: "Proyectos",
-      path: "/proyects",
+      path: "#we",
     },
     {
       name: "Servicios",
-      path: "/services",
+      path: "#services",
+    },
+    {
+      name: "Proyectos",
+      path: "#proyects",
     },
     {
       name: "Galería",
-      path: "/gallery",
+      path: "#gallery",
     },
   ];
 
@@ -55,19 +56,25 @@ const MobileNav = () => {
         }`}
       >
         <motion.div
-          className={`w-6 h-1 mb-1 rounded top-14 ${isOpen ? 'bg-black':'bg-white'} transition-colors duration-500 ease-out delay-200`}
+          className={`w-6 h-1 mb-1 rounded top-14 ${
+            isOpen ? "bg-black" : "bg-white"
+          } transition-colors duration-500 ease-out delay-200`}
           animate={isOpen ? "open" : "closed"}
           variants={topLineVariants}
           transition={{ duration: 0.3 }}
         />
         <motion.div
-          className={`w-6 h-1 mb-1 rounded top-16 ${isOpen ? 'bg-black':'bg-white'} transition-colors duration-500 ease-out delay-200`}
+          className={`w-6 h-1 mb-1 rounded top-16 ${
+            isOpen ? "bg-black" : "bg-white"
+          } transition-colors duration-500 ease-out delay-200`}
           animate={isOpen ? "open" : "closed"}
           variants={middleLineVariants}
           transition={{ duration: 0.3 }}
         />
         <motion.div
-          className={`w-6 h-1 mb-1 rounded top-20 ${isOpen ? 'bg-black': 'bg-white'} transition-colors duration-500 ease-out delay-200`}
+          className={`w-6 h-1 mb-1 rounded top-20 ${
+            isOpen ? "bg-black" : "bg-white"
+          } transition-colors duration-500 ease-out delay-200`}
           animate={isOpen ? "open" : "closed"}
           variants={bottomLineVariants}
           transition={{ duration: 0.3 }}
@@ -87,15 +94,14 @@ const MobileNav = () => {
               <img src={mobileLogo} alt="mobileLogo" />
             </div>
             <ul className="space-y-8">
-              {links.map((item, index) => (
-                <li
-                  key={index}
-                  href={item.path}
-                  onClick={() => setIsOpen(false)}
-                >
-                  <a className="text-black text-2xl hover:text-gray-300">
-                    {item.name}
-                  </a>
+              {links.map((link, index) => (
+                <li key={index} onClick={() => setIsOpen(false)}>
+                  <Link
+                    smooth to={link.path}
+                    className="text-black text-2xl hover:text-gray-300"
+                  >
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
